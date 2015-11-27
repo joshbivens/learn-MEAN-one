@@ -17,7 +17,9 @@ app.controller('MainCtrl', [
     };
 
     $scope.incrementUpvotes = function(post) {
-      post.upvotes += 1;
+      if(post.upvotes === 0) {
+        post.upvotes += 1;
+      }
     }
 
   }
