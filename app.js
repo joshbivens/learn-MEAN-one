@@ -2,7 +2,7 @@ var app = angular.module('flapperNews', []);
 
 app.factory('posts', [function(){
   var o = {
-    post: []
+    posts: []
   };
   return o;
 }]);
@@ -22,6 +22,7 @@ app.controller('MainCtrl', [
       });
       $scope.title = '';
       $scope.link = '';
+      console.log(posts.posts);
     };
 
     $scope.incrementUpvotes = function(post) {
